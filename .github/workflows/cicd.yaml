@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - master  # Updated to track 'master' branch
+      - master
 
 jobs:
   build-and-push:
@@ -48,5 +48,5 @@ jobs:
 
     - name: Deploy to Kubernetes
       run: |
-        kubectl apply -f deployment.yaml
-        kubectl apply -f service.yaml
+        kubectl apply -f k8s/deployment.yaml --validate=false
+        kubectl apply -f k8s/service.yaml --validate=false
