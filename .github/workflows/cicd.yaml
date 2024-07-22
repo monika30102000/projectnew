@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - master
+      - master  # Updated to track 'master' branch
 
 jobs:
   build-and-push:
