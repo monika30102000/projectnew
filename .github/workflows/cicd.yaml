@@ -49,4 +49,4 @@ jobs:
     - name: Deploy to Kubernetes
       run: |
         kubectl create -f deployment.yaml --validate=false
-        kubectl create -f service.yaml --validate=false
+        kubectl create -f service.yaml 
